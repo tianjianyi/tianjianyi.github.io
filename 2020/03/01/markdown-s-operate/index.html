@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="博客文章标题设置, yifeng">
+    <meta name="keywords" content="markdown 的基础操作, yifeng">
     <meta name="description" content="一直奔跑，哪怕风雨">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>博客文章标题设置 | yifeng</title>
+    <title>markdown 的基础操作 | yifeng</title>
     <link rel="icon" type="image/jpeg" href="/icon.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -237,12 +237,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">博客文章标题设置</h1>
+                    <h1 class="description center-align post-title">markdown 的基础操作</h1>
                 </div>
             </div>
         </div>
@@ -285,7 +285,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-28
+                    2020-03-01
                 </div>
                 
 
@@ -299,14 +299,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    455
+                    627
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -322,18 +322,113 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="title"><a href="#title" class="headerlink" title="title"></a>title</h2><p>Markdown 的文件标题    文章标题，强烈建议填写此选项</p>
-<h2 id="date"><a href="#date" class="headerlink" title="date"></a>date</h2><p>文件创建时的日期时间    发布时间，强烈建议填写此选项，且最好保证全局唯一</p>
-<h2 id="author"><a href="#author" class="headerlink" title="author"></a>author</h2><p>根 _config.yml 中的 author    文章作者</p>
-<h2 id="img"><a href="#img" class="headerlink" title="img"></a>img</h2><p>featureImages 中的某个值    文章特征图，推荐使用图床(腾讯云、七牛云、又拍云等)来做图片的路径.如: <a href="http://xxx.com/xxx.jpg" target="_blank" rel="noopener">http://xxx.com/xxx.jpg</a></p>
-<h2 id="top-true"><a href="#top-true" class="headerlink" title="top    true"></a>top    true</h2><p>推荐文章（文章是否置顶），如果 top 值为 true，则会作为首页推荐文章</p>
-<h2 id="cover-false"><a href="#cover-false" class="headerlink" title="cover    false"></a>cover    false</h2><p>v1.0.2版本新增，表示该文章是否需要加入到首页轮播封面中</p>
-<h2 id="coverImg"><a href="#coverImg" class="headerlink" title="coverImg"></a>coverImg</h2><p>无    v1.0.2版本新增，表示该文章在首页轮播封面需要显示的图片路径，如果没有，则默认使用文章的特色图片</p>
-<h2 id="password"><a href="#password" class="headerlink" title="password"></a>password</h2><p> 无    文章阅读密码，如果要对文章设置阅读验证密码的话，就可以设置 password 的值，该值必须是用 SHA256加密后的密码，防止被他人识破。前提是在主题的 config.yml 中激活了 verifyPassword 选项</p>
-<h2 id="toc-true"><a href="#toc-true" class="headerlink" title="toc    true"></a>toc    true</h2><p>是否开启 TOC，可以针对某篇文章单独关闭 TOC 的功能。前提是在主题的 config.yml 中激活了 toc 选项<br>mathjax    false    是否开启数学公式支持 ，本文章是否开启 mathjax，且需要在主题的 _config.yml 文件中也需要开启才行</p>
-<h2 id="summary-无"><a href="#summary-无" class="headerlink" title="summary    无"></a>summary    无</h2><p>文章摘要，自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要</p>
-<h2 id="categories-无"><a href="#categories-无" class="headerlink" title="categories    无"></a>categories    无</h2><p>文章分类，本主题的分类表示宏观上大的分类，只建议一篇文章一个分类</p>
-<h2 id="tags-无"><a href="#tags-无" class="headerlink" title="tags    无"></a>tags    无</h2><p>文章标签，一篇文章可以多个标签</p>
+                <h2 id="1、标题：-H1-H6"><a href="#1、标题：-H1-H6" class="headerlink" title="1、标题：(H1~H6)"></a>1、标题：(H1~H6)</h2><pre><code>H1（#） ----------ctrl+1
+H2(##) -------------ctrl+2
+…
+H6（######） --ctrl+6</code></pre><h2 id="2、引用-（-gt-开头）"><a href="#2、引用-（-gt-开头）" class="headerlink" title="2、引用 （&gt;开头）"></a>2、引用 （&gt;开头）</h2><pre><code>开头以 &gt; 表示，可以嵌套引用</code></pre><p>例：</p>
+<blockquote>
+<p>Hello</p>
+</blockquote>
+<h2 id="3、序列"><a href="#3、序列" class="headerlink" title="3、序列"></a>3、序列</h2><h4 id="3-1-无序序列（-内容）"><a href="#3-1-无序序列（-内容）" class="headerlink" title="3.1 无序序列（+/-/* 内容）"></a>3.1 无序序列（+/-/* 内容）</h4><pre><code>+ Red
+- Green
+* Blue</code></pre><p>效果：</p>
+<ul>
+<li>Red</li>
+</ul>
+<ul>
+<li>Green</li>
+</ul>
+<ul>
+<li>Blue</li>
+</ul>
+<h4 id="3-2-有序序列-1-2-3-内容"><a href="#3-2-有序序列-1-2-3-内容" class="headerlink" title="3.2 有序序列 (1/2/3. 内容)"></a>3.2 有序序列 (1/2/3. 内容)</h4><pre><code>1.  Red
+2.  Green
+3.    Blue</code></pre><p>效果：</p>
+<ol>
+<li>Red</li>
+<li>Green</li>
+<li>Blue</li>
+</ol>
+<h4 id="3-3-可选序列-（-内容）"><a href="#3-3-可选序列-（-内容）" class="headerlink" title="3.3 可选序列 （*/+/- [ ] 内容）"></a>3.3 可选序列 （*/+/- [ ] 内容）</h4><pre><code>- [ ] a
++ [x] b
+* [ ] c</code></pre><p>效果：</p>
+<ul>
+<li><input disabled="" type="checkbox"> a</li>
+</ul>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> b</li>
+</ul>
+<ul>
+<li><input disabled="" type="checkbox"> c</li>
+</ul>
+<h2 id="4、代码块（将代码放在两个-之间）"><a href="#4、代码块（将代码放在两个-之间）" class="headerlink" title="4、代码块（将代码放在两个```之间）"></a>4、代码块（将代码放在两个```之间）</h2><p>效果：</p>
+<pre><code>#include&lt;stdio.h&gt;
+int main(){
+    printf(&quot;Hello World!\n&quot;);
+    return 0;
+}</code></pre><h2 id="5、行内代码-（代码放在两个-之间）"><a href="#5、行内代码-（代码放在两个-之间）" class="headerlink" title="5、行内代码 （代码放在两个``之间）"></a>5、行内代码 （代码放在两个``之间）</h2><pre><code>use the &#39;printf()&#39; function;</code></pre><p>效果：<br>use the <code>printf()</code> function;</p>
+<h2 id="6-数学公式"><a href="#6-数学公式" class="headerlink" title="6.数学公式"></a>6.数学公式</h2><h4 id="6-1-数学块-（-开头）"><a href="#6-1-数学块-（-开头）" class="headerlink" title="6.1 数学块 （$$开头）"></a>6.1 数学块 （$$开头）</h4><pre><code>$$
+\lim_{x \to \infty} \exp(-x) = 0
+$$</code></pre><p>效果：<br>$$<br>\lim_{x \to \infty} \exp(-x) = 0<br>$$</p>
+<h4 id="6-2-行内数学公式-（以-开头结尾）"><a href="#6-2-行内数学公式-（以-开头结尾）" class="headerlink" title="6.2 行内数学公式 （以$开头结尾）"></a>6.2 行内数学公式 （以$开头结尾）</h4><pre><code>$\lim_{x \to \infty} \exp(-x) = 0$</code></pre><p>效果：<br>$\lim_{x \to \infty} \exp(-x) = 0$</p>
+<h2 id="7、表格-（-为分割线）"><a href="#7、表格-（-为分割线）" class="headerlink" title="7、表格 （|为分割线）"></a>7、表格 （|为分割线）</h2><p>用法：</p>
+<pre><code>以|为分割线，划分表格
+例：
+|1|2|3|4|</code></pre><p>效果：<br>|1|2|3|4|</p>
+<h2 id="8、脚注-（-内容-）"><a href="#8、脚注-（-内容-）" class="headerlink" title="8、脚注 （[^内容]）"></a>8、脚注 （[^内容]）</h2><p>例：</p>
+<pre><code>脚注[^1]
+[^1]:解释</code></pre><p>效果：<br>脚注[^1]</p>
+<h2 id="9、分割线-（-或者—）"><a href="#9、分割线-（-或者—）" class="headerlink" title="9、分割线 （***或者—）"></a>9、分割线 （***或者—）</h2><p>例：</p>
+<pre><code>***</code></pre><p>效果：</p>
+<hr>
+<h2 id="10、YAML-Front-Matter2-（—）"><a href="#10、YAML-Front-Matter2-（—）" class="headerlink" title="10、YAML Front Matter2 （—）"></a>10、YAML Front Matter2 （—）</h2><p>用法：</p>
+<pre><code>在开头输入—</code></pre><p>效果：<br>—input</p>
+<h2 id="11、链接"><a href="#11、链接" class="headerlink" title="11、链接"></a>11、链接</h2><h4 id="11-1-内链-（链接内容）"><a href="#11-1-内链-（链接内容）" class="headerlink" title="11.1 内链 （链接内容）"></a>11.1 内链 （<a href="链接源" title="title">链接内容</a>）</h4><p>例：</p>
+<pre><code>[Baidu](https://www.baidu.com &quot;Baidu&quot;)</code></pre><p>效果：<br><a href="https://www.baidu.com" target="_blank" rel="noopener" title="Baidu">Baidu</a><br>title需要加引号</p>
+<h4 id="11-2-引用链接-（-链接内容-id-）"><a href="#11-2-引用链接-（-链接内容-id-）" class="headerlink" title="11.2 引用链接 （[链接内容][id]）"></a>11.2 引用链接 （[链接内容][id]）</h4><p>用法：</p>
+<pre><code>[链接内容][id]
+[id]:链接源 &quot;title&quot;
+例：
+[Baidu][id]
+[id]:http://www.baidu.com &quot;Baidu&quot;</code></pre><p>效果：<br>[Baidu][id]<br>[id]: <a href="http://www.baidu.com" target="_blank" rel="noopener">http://www.baidu.com</a>    “Baidu”</p>
+<h2 id="12、URLs-（-lt-gt-括住URL）"><a href="#12、URLs-（-lt-gt-括住URL）" class="headerlink" title="12、URLs （&lt;&gt;括住URL）"></a>12、URLs （&lt;&gt;括住URL）</h2><pre><code>用&lt;&gt;括住URL
+对于标准URL，可自动识别
+例：
+www.baidu.com
+&lt;i@163.com&gt;</code></pre><p>效果:<br><a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a><br><a href="mailto:&#x69;&#64;&#x31;&#54;&#x33;&#x2e;&#99;&#111;&#109;">&#x69;&#64;&#x31;&#54;&#x33;&#x2e;&#99;&#111;&#109;</a></p>
+<h2 id="13、图片"><a href="#13、图片" class="headerlink" title="13、图片"></a>13、图片</h2><p>用法：</p>
+<pre><code>手动添加，前面加!，格式类似链接
+用鼠标将图片拖入
+例：
+![截图](D:\Typora\笔记\1.jpg &quot;截图&quot;)</code></pre><h2 id="14、斜体-（以-或-括住）"><a href="#14、斜体-（以-或-括住）" class="headerlink" title="14、斜体 （以* *或_ _括住）"></a>14、斜体 （以* *或_ _括住）</h2><p>例：</p>
+<pre><code>*example* _example_</code></pre><p>效果：<br><em>example</em> <em>example</em></p>
+<h2 id="15、加粗-（-或-）"><a href="#15、加粗-（-或-）" class="headerlink" title="15、加粗 （** **或__ __）"></a>15、加粗 （** **或__ __）</h2><pre><code>以双或双_开头，以双或双_结尾
+例：**example** __example__</code></pre><p>效果:<br><strong>example</strong> <strong>example</strong></p>
+<h2 id="16、删除线-（以两个-开头结尾）"><a href="#16、删除线-（以两个-开头结尾）" class="headerlink" title="16、删除线 （以两个~~开头结尾）"></a>16、删除线 （以两个~~开头结尾）</h2><pre><code>以两个~开头，两个~结尾
+例：
+~example~</code></pre><p>效果：<br><del>example</del></p>
+<h2 id="17、下划线-（-）"><a href="#17、下划线-（-）" class="headerlink" title="17、下划线 （ ）"></a>17、下划线 （<u> </u>）</h2><pre><code>&lt;u&gt;example&lt;/u&gt;</code></pre><p>效果：<br><u>example</u></p>
+<h2 id="18、表情-（-表情单词-）"><a href="#18、表情-（-表情单词-）" class="headerlink" title="18、表情 （:表情单词:）"></a>18、表情 （:表情单词:）</h2><p>例：</p>
+<pre><code>:smile:
+:angry:
+:happy:
+:cry:
+:weary:            //疲倦的
+:flushed:        //兴奋的
+:imp:            //魔鬼</code></pre><p>:smile:<br>:angry:<br>:happy:<br>:cry:<br>:weary:<br>:flushed:<br>:imp:            </p>
+<h2 id="19、下标-（以双-括住内容）"><a href="#19、下标-（以双-括住内容）" class="headerlink" title="19、下标 （以双~括住内容）"></a>19、下标 （以双~括住内容）</h2><pre><code>使用双~括住内容
+例：
+H~2~0</code></pre><p>效果：<br>H<del>2</del>0</p>
+<h2 id="20、上标-（以双-括住内容）"><a href="#20、上标-（以双-括住内容）" class="headerlink" title="20、上标 （以双^括住内容）"></a>20、上标 （以双^括住内容）</h2><pre><code>用法：
+使用双^括住内容
+例：
+x^2^</code></pre><p>效果：<br>x^2^</p>
+<h2 id="21、高亮-（以双-括住内容）"><a href="#21、高亮-（以双-括住内容）" class="headerlink" title="21、高亮 （以双==括住内容）"></a>21、高亮 （以双==括住内容）</h2><pre><code>用法：
+使用双==括住内容
+例：
+==asd==</code></pre><p>效果：<br>==asd==</p>
+<h2 id="22、HTML"><a href="#22、HTML" class="headerlink" title="22、HTML"></a>22、HTML</h2><pre><code>例：
+&lt;button&gt;example&lt;/button&gt;</code></pre><p>效果：<br><button>example</button></p>
 
             </div>
             <hr/>
@@ -359,7 +454,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://tianjianyi.github.io.git/2020/02/28/Hello-My-First-Blog/">https://tianjianyi.github.io.git/2020/02/28/Hello-My-First-Blog/</a>
+                    <a href="https://tianjianyi.github.io.git/2020/03/01/markdown-s-operate/">https://tianjianyi.github.io.git/2020/03/01/markdown-s-operate/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -827,6 +922,56 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
+                <a href="/2020/03/01/leetcode1/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="leetcode1:两数之和">
+                        
+                        <span class="card-title">leetcode1:两数之和</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            1.题意给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。
+2.思路1.首先肯定是暴力解法双重循环暴力解决，复杂度 O（n2）2.如果题目是有序的话我们可以二分优化一
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-01
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Markdown/" class="post-category">
+                                    Markdown
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/leetcode/">
+                        <span class="chip bg-color">leetcode</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
                 <a href="/2020/02/29/My-New-Post/">
                     <div class="card-image">
                         
@@ -843,45 +988,8 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-29
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            tianjian
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/02/27/hello-world/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
-                        
-                        <span class="card-title">Hello World</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
-                        
-                    </div>
-                    <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-27
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-29
                             </span>
                         <span class="publish-author">
                             
