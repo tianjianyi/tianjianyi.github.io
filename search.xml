@@ -1,9 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>text</title>
-    <url>/2020/03/03/text/</url>
-    <content><![CDATA[]]></content>
+    <title>内推试水加吐槽加分享</title>
+    <url>/2020/03/11/work/</url>
+    <content><![CDATA[<p>中午闲着没事做，又不想睡觉，就20分钟做了份简历，找渠道搞了些内推，瞎搞了一翻。考研人的无聊救赎，你们都去找工作吧，弟弟想上岸。<br><img src="/images/blog/1.jpg" alt="被疫情逼疯的考研生"></p>
+<h4 id="1-快手"><a href="#1-快手" class="headerlink" title="1.快手"></a>1.快手</h4><p><a href="https://campus.kuaishou.cn/#/campus/index" target="_blank" rel="noopener" title="kuaishou">点击去投</a></p>
+<h6 id="吐槽和建议"><a href="#吐槽和建议" class="headerlink" title="吐槽和建议"></a>吐槽和建议</h6><p>快手的内推网站做的是真的烂，我的简历就传了一半，就投了，注意看自己的简历，注意多刷新几次。</p>
+<p>快手老铁永久的失去我了<br><img src="/images/blog/2.jpg" alt=""></p>
+<h4 id="2-小米"><a href="#2-小米" class="headerlink" title="2.小米"></a>2.小米</h4><p><a href="https://app.mokahr.com/campus_apply/xiaomi/22018#/jobs?_k=u2rkc9" target="_blank" rel="noopener" title="xiaomi">点击去投</a></p>
+<h5 id="吐槽和建议-1"><a href="#吐槽和建议-1" class="headerlink" title="吐槽和建议"></a>吐槽和建议</h5><p>作为朋友圈小米第一黑粉，也不得不夸小米内推网站体验感还真不错，没有吐槽的地方。OMG投他</p>
+<h4 id="3-网易"><a href="#3-网易" class="headerlink" title="3.网易"></a>3.网易</h4><p><a href="https://campus.163.com/app/index" target="_blank" rel="noopener" title="wangyi">点击去投</a></p>
+<h5 id="吐槽和建议-2"><a href="#吐槽和建议-2" class="headerlink" title="吐槽和建议"></a>吐槽和建议</h5><p>网易这公司真有意思，竞赛只有top3，top10和进入决赛，实习生门槛这么高吗。 自卑.jpg</p>
+<h4 id="4-京东"><a href="#4-京东" class="headerlink" title="4.京东"></a>4.京东</h4><p><a href="http://campus.jd.com/home" target="_blank" rel="noopener" title="jingdong">点击去投</a></p>
+<h5 id="吐槽和建议-3"><a href="#吐槽和建议-3" class="headerlink" title="吐槽和建议"></a>吐槽和建议</h5><p>需要内推码，有需要的童鞋可以私戳我，京东这页面是贼棒的，不过需要成绩单和证书啥的，都在学校就没投。</p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>先这四个吧，随便一玩竟成了用户体验教验员，快手程序员扣工资，啥网站，体验贼差。<br>不定时更新，欢迎关注我博客。</p>
+]]></content>
+      <categories>
+        <category>Markdown</category>
+      </categories>
+      <tags>
+        <tag>work</tag>
+      </tags>
   </entry>
   <entry>
     <title>leetcode2两数相加</title>
@@ -167,7 +184,7 @@ $$</code></pre><p>效果：<br>$$<br>\lim_{x \to \infty} \exp(-x) = 0<br>$$</p>
 对于标准URL，可自动识别
 例：
 www.baidu.com
-&lt;i@163.com&gt;</code></pre><p>效果:<br><a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a><br><a href="mailto:&#x69;&#64;&#x31;&#54;&#x33;&#x2e;&#99;&#111;&#109;">&#x69;&#64;&#x31;&#54;&#x33;&#x2e;&#99;&#111;&#109;</a></p>
+&lt;i@163.com&gt;</code></pre><p>效果:<br><a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a><br><a href="mailto:&#105;&#64;&#49;&#54;&#51;&#x2e;&#x63;&#111;&#109;">&#105;&#64;&#49;&#54;&#51;&#x2e;&#x63;&#111;&#109;</a></p>
 <h2 id="13、图片"><a href="#13、图片" class="headerlink" title="13、图片"></a>13、图片</h2><p>用法：</p>
 <pre><code>手动添加，前面加!，格式类似链接
 用鼠标将图片拖入
