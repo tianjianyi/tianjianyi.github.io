@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="博客文章标题设置, yifeng">
+    <meta name="keywords" content="${pageContext.request.contextPath}解析失败, yifeng">
     <meta name="description" content="一直奔跑，哪怕风雨">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>博客文章标题设置 | yifeng</title>
+    <title>${pageContext.request.contextPath}解析失败 | yifeng</title>
     <link rel="icon" type="image/jpeg" href="/icon.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -237,12 +237,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">博客文章标题设置</h1>
+                    <h1 class="description center-align post-title">${pageContext.request.contextPath}解析失败</h1>
                 </div>
             </div>
         </div>
@@ -262,9 +262,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/java/">
+                                <span class="chip bg-color">java</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -285,7 +289,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-28
+                    2020-03-14
                 </div>
                 
 
@@ -299,7 +303,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    455
+                    134
                 </div>
                 
 
@@ -322,19 +326,13 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="title"><a href="#title" class="headerlink" title="title"></a>title</h2><p>Markdown 的文件标题    文章标题，强烈建议填写此选项</p>
-<h2 id="date"><a href="#date" class="headerlink" title="date"></a>date</h2><p>文件创建时的日期时间    发布时间，强烈建议填写此选项，且最好保证全局唯一</p>
-<h2 id="author"><a href="#author" class="headerlink" title="author"></a>author</h2><p>根 _config.yml 中的 author    文章作者</p>
-<h2 id="img"><a href="#img" class="headerlink" title="img"></a>img</h2><p>featureImages 中的某个值    文章特征图，推荐使用图床(腾讯云、七牛云、又拍云等)来做图片的路径.如: <a href="http://xxx.com/xxx.jpg" target="_blank" rel="noopener">http://xxx.com/xxx.jpg</a></p>
-<h2 id="top-true"><a href="#top-true" class="headerlink" title="top    true"></a>top    true</h2><p>推荐文章（文章是否置顶），如果 top 值为 true，则会作为首页推荐文章</p>
-<h2 id="cover-false"><a href="#cover-false" class="headerlink" title="cover    false"></a>cover    false</h2><p>v1.0.2版本新增，表示该文章是否需要加入到首页轮播封面中</p>
-<h2 id="coverImg"><a href="#coverImg" class="headerlink" title="coverImg"></a>coverImg</h2><p>无    v1.0.2版本新增，表示该文章在首页轮播封面需要显示的图片路径，如果没有，则默认使用文章的特色图片</p>
-<h2 id="password"><a href="#password" class="headerlink" title="password"></a>password</h2><p> 无    文章阅读密码，如果要对文章设置阅读验证密码的话，就可以设置 password 的值，该值必须是用 SHA256加密后的密码，防止被他人识破。前提是在主题的 config.yml 中激活了 verifyPassword 选项</p>
-<h2 id="toc-true"><a href="#toc-true" class="headerlink" title="toc    true"></a>toc    true</h2><p>是否开启 TOC，可以针对某篇文章单独关闭 TOC 的功能。前提是在主题的 config.yml 中激活了 toc 选项<br>mathjax    false    是否开启数学公式支持 ，本文章是否开启 mathjax，且需要在主题的 _config.yml 文件中也需要开启才行</p>
-<h2 id="summary-无"><a href="#summary-无" class="headerlink" title="summary    无"></a>summary    无</h2><p>文章摘要，自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要</p>
-<h2 id="categories-无"><a href="#categories-无" class="headerlink" title="categories    无"></a>categories    无</h2><p>文章分类，本主题的分类表示宏观上大的分类，只建议一篇文章一个分类</p>
-<h2 id="tags-无"><a href="#tags-无" class="headerlink" title="tags    无"></a>tags    无</h2><p>文章标签，一篇文章可以多个标签</p>
-
+                <h4 id="pageContext-request-contextPath-被解析成了-7BpageContext-request-contextPath-7D"><a href="#pageContext-request-contextPath-被解析成了-7BpageContext-request-contextPath-7D" class="headerlink" title="${pageContext.request.contextPath}被解析成了$%7BpageContext.request.contextPath%7D"></a>${pageContext.request.contextPath}被解析成了$%7BpageContext.request.contextPath%7D</h4><p>这东西困扰了我好几天，一开始以为数据加载问题，清了即便缓存没有效果，后来查了查才知道这东西多么的弱智。</p>
+<p>webapp版本问题。。。</p>
+<p>解决方法：更改web.xml下webapp版本据说要2.4以上，参考：</p>
+<pre><code>&lt;web-app xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+         xmlns=&quot;http://xmlns.jcp.org/xml/ns/javaee&quot;
+         xsi:schemaLocation=&quot;http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd&quot;
+         version=&quot;3.1&quot;&gt;</code></pre>
             </div>
             <hr/>
 
@@ -359,7 +357,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://tianjianyi.github.io.git/2020/02/28/Hello-My-First-Blog/">https://tianjianyi.github.io.git/2020/02/28/Hello-My-First-Blog/</a>
+                    <a href="https://tianjianyi.github.io.git/2020/03/14/java-path/">https://tianjianyi.github.io.git/2020/03/14/java-path/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -396,7 +394,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/java/">
+                                    <span class="chip bg-color">java</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -827,24 +829,24 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/03/01/markdown-s-operate/">
+                <a href="/2020/03/18/lucene01/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="markdown 的基础操作">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="lucene01">
                         
-                        <span class="card-title">markdown 的基础操作</span>
+                        <span class="card-title">lucene01</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            markdown的基础操作
+                            lucene的简单应用和操作
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-01
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-18
                         </span>
                         <span class="publish-author">
                             
@@ -859,6 +861,14 @@
                     </div>
                 </div>
                 
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/java-lucene/">
+                        <span class="chip bg-color">java,lucene</span>
+                    </a>
+                    
+                </div>
+                
             </div>
         </div>
         
@@ -868,24 +878,24 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/02/27/hello-world/">
+                <a href="/2020/03/11/work/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="内推试水加吐槽加分享">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">内推试水加吐槽加分享</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            hexo基础操作
+                            一些内推推荐
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-27
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-11
                             </span>
                         <span class="publish-author">
                             
@@ -898,6 +908,14 @@
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/work/">
+                        <span class="chip bg-color">work</span>
+                    </a>
+                    
                 </div>
                 
             </div>

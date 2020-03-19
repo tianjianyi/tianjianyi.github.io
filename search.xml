@@ -1,267 +1,214 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title>内推试水加吐槽加分享</title>
-    <url>/2020/03/11/work/</url>
-    <content><![CDATA[<p>中午闲着没事做，又不想睡觉，就20分钟做了份简历，找渠道搞了些内推，瞎搞了一翻。考研人的无聊救赎，你们都去找工作吧，弟弟想上岸。<br><img src="/images/blog/1.jpg" alt="被疫情逼疯的考研生"></p>
-<h4 id="1-快手"><a href="#1-快手" class="headerlink" title="1.快手"></a>1.快手</h4><p><a href="https://campus.kuaishou.cn/#/campus/index" target="_blank" rel="noopener" title="kuaishou">点击去投</a></p>
-<h6 id="吐槽和建议"><a href="#吐槽和建议" class="headerlink" title="吐槽和建议"></a>吐槽和建议</h6><p>快手的内推网站做的是真的烂，我的简历就传了一半，就投了，注意看自己的简历，注意多刷新几次。</p>
-<p>快手老铁永久的失去我了<br><img src="/images/blog/2.jpg" alt=""></p>
-<h4 id="2-小米"><a href="#2-小米" class="headerlink" title="2.小米"></a>2.小米</h4><p><a href="https://app.mokahr.com/campus_apply/xiaomi/22018#/jobs?_k=u2rkc9" target="_blank" rel="noopener" title="xiaomi">点击去投</a></p>
-<h5 id="吐槽和建议-1"><a href="#吐槽和建议-1" class="headerlink" title="吐槽和建议"></a>吐槽和建议</h5><p>作为朋友圈小米第一黑粉，也不得不夸小米内推网站体验感还真不错，没有吐槽的地方。OMG投他</p>
-<h4 id="3-网易"><a href="#3-网易" class="headerlink" title="3.网易"></a>3.网易</h4><p><a href="https://campus.163.com/app/index" target="_blank" rel="noopener" title="wangyi">点击去投</a></p>
-<h5 id="吐槽和建议-2"><a href="#吐槽和建议-2" class="headerlink" title="吐槽和建议"></a>吐槽和建议</h5><p>网易这公司真有意思，竞赛只有top3，top10和进入决赛，实习生门槛这么高吗。 自卑.jpg</p>
-<h4 id="4-京东"><a href="#4-京东" class="headerlink" title="4.京东"></a>4.京东</h4><p><a href="http://campus.jd.com/home" target="_blank" rel="noopener" title="jingdong">点击去投</a></p>
-<h5 id="吐槽和建议-3"><a href="#吐槽和建议-3" class="headerlink" title="吐槽和建议"></a>吐槽和建议</h5><p>需要内推码，有需要的童鞋可以私戳我，京东这页面是贼棒的，不过需要成绩单和证书啥的，都在学校就没投。</p>
-<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>先这四个吧，随便一玩竟成了用户体验教验员，快手程序员扣工资，啥网站，体验贼差。<br>不定时更新，欢迎关注我博客。</p>
-]]></content>
+<search> 
+  
+  
+    
+    <entry>
+      <title>SSM学生管理系统</title>
+      <link href="/2020/03/19/student-exam/"/>
+      <url>/2020/03/19/student-exam/</url>
+      
+        <content type="html"><![CDATA[<h2 id="SSM学生管理系统"><a href="#SSM学生管理系统" class="headerlink" title="SSM学生管理系统"></a>SSM学生管理系统</h2><p>简单介绍下搬砖的经过，用时大约一点半，所用技术ssm框架，bootstrap前端框架，springsecrity 安全框架，项目这种东西知道需求和流程后，只要会写sql剩下的都是些重复性工作了。刷剧必备</p><h4 id="数据库设计-半天"><a href="#数据库设计-半天" class="headerlink" title="数据库设计(半天)"></a>数据库设计(半天)</h4><p>这东西应该是最难的，我是用的python读取excel生成sql语句，用了这么半年Java，还是python好用，泪目.jpg<br>全是真实数据不方便公布，就把python代码公布一下。不过数据库设计还是有不足，想的不充分。</p><pre><code>import matplotlib.pyplot as pltimport pandas as pdimport numpy as npimport math# date = pd.read_excel(&quot;student_import.xlsx&quot;)## id = date[&quot;学号&quot;]# # print(len(id))# for i in range(0, len(id)):#     id1 = str(id[i])#     # id1 = &quot;201711010226&quot;#     sql = &quot;insert into user (userId, PASSWORD, roldId) values (&quot;#     sql= sql + &quot;&#39;&quot; + id1 + &quot;&#39;&quot; + &quot;,&quot; +  &quot;&#39;&quot; + id1[-6 : ] + &quot;&#39;&quot; + &quot;,&quot; + &quot;1);&quot;#     print(sql)# date = pd.read_excel(&quot;teacher_import.xlsx&quot;)## id = date[&quot;教师工号&quot;]# # print(len(id))# for i in range(0, len(id)):#     id1 = str(id[i])#     # id1 = &quot;201711010226&quot;#     sql = &quot;insert into user (userId, PASSWORD, roldId) values (&quot;#     sql= sql + &quot;&#39;&quot; + id1 + &quot;&#39;&quot; + &quot;,&quot; +  &quot;&#39;&quot; + id1 + &quot;&#39;&quot; + &quot;,&quot; + &quot;2);&quot;#     print(sql)# date = pd.read_excel(&quot;student_import.xlsx&quot;)## id = date[&quot;学号&quot;]# name = date[&quot;姓名&quot;]# major = date[&quot;录取专业&quot;]# clazz = date[&quot;拟分入班级&quot;]# # print(len(id))# for i in range(0, len(id)):#     id1 = str(id[i])#     name1 = str(name[i])#     major1 = str(major[i])#     clazz1 = str(clazz[i])#     # id1 = &quot;201711010226&quot;#     sql = &quot;insert into student (    studentId, name,major,clazz) values (&quot;#     sql= sql + &quot;&#39;&quot; + id1 + &quot;&#39;&quot; + &quot;,&quot; +  &quot;&#39;&quot; + name1 + &quot;&#39;&quot; + &quot;,&quot; + &quot;&#39;&quot; +  major1[:8] + &quot;&#39;&quot; + &quot;,&quot; +  &quot;&#39;计工本170&quot; + clazz1 + &quot;&#39;&quot; + &quot;);&quot;#     print(sql)# date = pd.read_excel(&quot;teacher_import.xlsx&quot;)## id = date[&quot;教师工号&quot;]# name = date[&quot;姓名&quot;]# major = date[&quot;学院&quot;]# clazz = date[&quot;所在系别&quot;]# # print(len(id))# for i in range(0, len(id)):#     id1 = str(id[i])#     name1 = str(name[i])#     major1 = str(major[i])#     clazz1 = str(clazz[i])#     # id1 = &quot;201711010226&quot;#     sql = &quot;insert into teacher (teacherId,name ,college,tie) values (&quot;#     sql= sql + &quot;&#39;&quot; + id1 + &quot;&#39;&quot; + &quot;,&quot; +  &quot;&#39;&quot; + name1 + &quot;&#39;&quot; + &quot;,&quot; + &quot;&#39;&quot; +  major1[:8] + &quot;&#39;&quot; + &quot;,&quot; +  &quot;&#39;计工本170&quot; + clazz1 + &quot;&#39;&quot; + &quot;);&quot;#     print(sql)date = pd.read_excel(&quot;course_import.xlsx&quot;)id = date[&quot;课程号&quot;]name = date[&quot;课程名称&quot;]teacher = date[&quot;老师&quot;]num = date[&quot;课容量&quot;]major = date[&quot;开设教室&quot;]clazz = date[&quot;教师教工号&quot;]# print(len(id))for i in range(0, len(id)):    id1 = str(id[i])    name1 = str(name[i])    teacher1 = str(teacher[i])    num1 = str(num[i])    major1 = str(major[i])    clazz1 = str(clazz[i])    # id1 = &quot;201711010226&quot;    sql = &quot;insert into course (courseId,name ,teachername,num,room,teacherId) values (&quot;    sql= sql + &quot;&#39;&quot; + id1 + &quot;&#39;&quot; + &quot;,&quot; +  &quot;&#39;&quot; + name1 + &quot;&#39;&quot; + &quot;,&quot; +  &quot;&#39;&quot; + teacher1  + &quot;&#39;&quot; + &quot;,&quot;+num1+&quot;,&quot; + &quot;&#39;&quot; +  major1[:8] + &quot;&#39;&quot; + &quot;,&quot; +  &quot;&#39;&quot; + clazz1 + &quot;&#39;&quot; + &quot;);&quot;    print(sql)</code></pre><h4 id="admin后台"><a href="#admin后台" class="headerlink" title="admin后台"></a>admin后台</h4><p>这应该是最简单的一部分啦，学生查询，教师查询，课程查询还是他们对应的增加修改和删除，简单增删查改的运用</p><h4 id="学生后台"><a href="#学生后台" class="headerlink" title="学生后台"></a>学生后台</h4><p>学生就是选课和退课还有查成绩，也没啥可说的</p><h4 id="教师后台"><a href="#教师后台" class="headerlink" title="教师后台"></a>教师后台</h4><p>就是查学他课的学生和查成绩</p><h4 id="springsecity"><a href="#springsecity" class="headerlink" title="springsecity"></a>springsecity</h4><p>这个想说一下，看了一些登入跳转页面的方法看的我一脸懵逼，其实我的解决方法很简单</p><p>1.跳转成功页面设置为一个控制器</p><pre><code>authentication-success-forward-url=&quot;/user/login.do&quot;</code></pre><p>2.控制器根据角色跳转不同页面</p><pre><code>  @RequestMapping(&quot;/login.do&quot;)    public String login(){        UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext()                .getAuthentication()                .getPrincipal();        String name = userDetails.getUsername();        UserInfo userInfo =  userService.findByName(name);        //System.out.println(userInfo);        if(userInfo.getRoldId() == 0)            return &quot;admin/main&quot;;        if(userInfo.getRoldId() == 1)            return &quot;student/main&quot;;        if(userInfo.getRoldId() == 2)            return &quot;teacher/main&quot;;        return &quot;&quot;;    }</code></pre><h4 id="总结一下"><a href="#总结一下" class="headerlink" title="总结一下"></a>总结一下</h4><p>搬砖挺舒服的<br><a href="https://github.com/tianjianyi/Student_Exam" target="_blank" rel="noopener" title="GitHub">GitHub</a> 下载源码</p>]]></content>
+      
+      
       <categories>
-        <category>Markdown</category>
+          
+          <category> Markdown </category>
+          
       </categories>
-      <tags>
-        <tag>work</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>leetcode2两数相加</title>
-    <url>/2020/03/01/leetcode2/</url>
-    <content><![CDATA[<h3 id="1-题意"><a href="#1-题意" class="headerlink" title="1.题意"></a>1.题意</h3><p>给出两个 非空 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方式存储的，并且它们的每个节点只能存储 一位 数字。<br>如果，我们将这两个数相加起来，则会返回一个新的链表来表示它们的和。<br>输入：(2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)<br>输出：7 -&gt; 0 -&gt; 8<br>原因：342 + 465 = 807</p>
-<h3 id="2-思路"><a href="#2-思路" class="headerlink" title="2.思路"></a>2.思路</h3><ol>
-<li>链表还是不是很熟悉</li>
-<li>直接模拟。因为是逆序给出的所以直接遍历一遍按位相加就好了，实现过程中用一个变量记录进位情况</li>
-</ol>
-<h3 id="3-代码展示"><a href="#3-代码展示" class="headerlink" title="3.代码展示"></a>3.代码展示</h3><pre><code>class Solution {
-public:
-    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-        ListNode res(0), *p = &amp;res;
-        int n = 0;
-        while(l1 != NULL || l2 != NULL || n){
-            int sum =0;
-            if(l1 != NULL) sum += l1 -&gt; val;
-            if(l2 != NULL) sum += l2 -&gt; val;
-            sum += n;
-            n = sum / 10;
-            p -&gt; next = new ListNode(sum % 10);
-            p = p -&gt; next;
-            if(l1 != NULL) l1 = l1 -&gt; next;
-            if(l2 != NULL) l2 = l2 -&gt; next;
-        }
-        return res.next;
-    }
-};
-</code></pre>]]></content>
+      
+      
+        <tags>
+            
+            <tag> java_web,ssm </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>lucene01</title>
+      <link href="/2020/03/18/lucene01/"/>
+      <url>/2020/03/18/lucene01/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
       <categories>
-        <category>Markdown</category>
+          
+          <category> Markdown </category>
+          
       </categories>
-      <tags>
-        <tag>leetcode</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>leetcode1:两数之和</title>
-    <url>/2020/03/01/leetcode1/</url>
-    <content><![CDATA[<h3 id="1-题意"><a href="#1-题意" class="headerlink" title="1. 题意"></a>1. 题意</h3><p>给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。</p>
-<h3 id="2-思路"><a href="#2-思路" class="headerlink" title="2. 思路"></a>2. 思路</h3><ol>
-<li>首先肯定是暴力解法双重循环暴力解决，复杂度 O（n2）</li>
-<li>如果题目是有序的话我们可以二分优化一重循环，不是有序可以用map记录下标但这样也不是很好</li>
-<li>我们可以借鉴桶排序思想用map记录一下，前面出现的值，循环寻找，这样就优化了一重循环，用空间复杂度换时间复杂度</li>
-</ol>
-<h3 id="3-代码展示"><a href="#3-代码展示" class="headerlink" title="3.代码展示"></a>3.代码展示</h3><h6 id="1-暴力解法"><a href="#1-暴力解法" class="headerlink" title="1.暴力解法"></a>1.暴力解法</h6><pre><code>class Solution {
-public:
-    vector&lt;int&gt; twoSum(vector&lt;int&gt;&amp; nums, int target) {
-        int d = nums.size();
-        vector&lt;int&gt; result;
-        int flag = 0;
-        for(int i = 0; i &lt; d; i++){
-            for(int j = 0; j &lt; d; j++){
-                if(i == j) continue;
-                if(nums[i] + nums[j] == target &amp;&amp; i != j){
-                    result.push_back(i);
-                    result.push_back(j);
-                    flag = 1;
-                    break;
-                }
-            }
-            if(flag) break;
-        }
-        return result;
-    }
-};</code></pre><h6 id="map优化解法"><a href="#map优化解法" class="headerlink" title="map优化解法"></a>map优化解法</h6><pre><code>class Solution {
-public:
-    vector&lt;int&gt; twoSum(vector&lt;int&gt;&amp; nums, int target) {
-        map&lt;int, int&gt; mp;
-        int n = nums.size();
-        for(int i = 0; i &lt; n; i++)
-        {
-            if(mp.count(target - nums[i]))
-                return {mp[target -nums[i]], i};
-            mp[nums[i]] = i;
-        }
-        return {-1, -1};
-    }
-};</code></pre><h3 id="4-总结"><a href="#4-总结" class="headerlink" title="4.总结"></a>4.总结</h3><p>1.好久没打比赛了有点生疏，呜呜呜我哭<br>2.leetcode这oj形式真难用<br>3.博客终于搭好了，开始写点技术类博客</p>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> java,lucene </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>${pageContext.request.contextPath}解析失败</title>
+      <link href="/2020/03/14/java-path/"/>
+      <url>/2020/03/14/java-path/</url>
+      
+        <content type="html"><![CDATA[<h4 id="pageContext-request-contextPath-被解析成了-7BpageContext-request-contextPath-7D"><a href="#pageContext-request-contextPath-被解析成了-7BpageContext-request-contextPath-7D" class="headerlink" title="${pageContext.request.contextPath}被解析成了$%7BpageContext.request.contextPath%7D"></a>${pageContext.request.contextPath}被解析成了$%7BpageContext.request.contextPath%7D</h4><p>这东西困扰了我好几天，一开始以为数据加载问题，清了即便缓存没有效果，后来查了查才知道这东西多么的弱智。</p><p>webapp版本问题。。。</p><p>解决方法：更改web.xml下webapp版本据说要2.4以上，参考：</p><pre><code>&lt;web-app xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;         xmlns=&quot;http://xmlns.jcp.org/xml/ns/javaee&quot;         xsi:schemaLocation=&quot;http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd&quot;         version=&quot;3.1&quot;&gt;</code></pre>]]></content>
+      
+      
       <categories>
-        <category>Markdown</category>
+          
+          <category> Markdown </category>
+          
       </categories>
-      <tags>
-        <tag>leetcode</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>markdown 的基础操作</title>
-    <url>/2020/03/01/markdown-s-operate/</url>
-    <content><![CDATA[<h2 id="1、标题：-H1-H6"><a href="#1、标题：-H1-H6" class="headerlink" title="1、标题：(H1~H6)"></a>1、标题：(H1~H6)</h2><pre><code>H1（#） ----------ctrl+1
-H2(##) -------------ctrl+2
-…
-H6（######） --ctrl+6</code></pre><h2 id="2、引用-（-gt-开头）"><a href="#2、引用-（-gt-开头）" class="headerlink" title="2、引用 （&gt;开头）"></a>2、引用 （&gt;开头）</h2><pre><code>开头以 &gt; 表示，可以嵌套引用</code></pre><p>例：</p>
-<blockquote>
-<p>Hello</p>
-</blockquote>
-<h2 id="3、序列"><a href="#3、序列" class="headerlink" title="3、序列"></a>3、序列</h2><h4 id="3-1-无序序列（-内容）"><a href="#3-1-无序序列（-内容）" class="headerlink" title="3.1 无序序列（+/-/* 内容）"></a>3.1 无序序列（+/-/* 内容）</h4><pre><code>+ Red
-- Green
-* Blue</code></pre><p>效果：</p>
-<ul>
-<li>Red</li>
-</ul>
-<ul>
-<li>Green</li>
-</ul>
-<ul>
-<li>Blue</li>
-</ul>
-<h4 id="3-2-有序序列-1-2-3-内容"><a href="#3-2-有序序列-1-2-3-内容" class="headerlink" title="3.2 有序序列 (1/2/3. 内容)"></a>3.2 有序序列 (1/2/3. 内容)</h4><pre><code>1.  Red
-2.  Green
-3.    Blue</code></pre><p>效果：</p>
-<ol>
-<li>Red</li>
-<li>Green</li>
-<li>Blue</li>
-</ol>
-<h4 id="3-3-可选序列-（-内容）"><a href="#3-3-可选序列-（-内容）" class="headerlink" title="3.3 可选序列 （*/+/- [ ] 内容）"></a>3.3 可选序列 （*/+/- [ ] 内容）</h4><pre><code>- [ ] a
-+ [x] b
-* [ ] c</code></pre><p>效果：</p>
-<ul>
-<li><input disabled="" type="checkbox"> a</li>
-</ul>
-<ul>
-<li><input checked="" disabled="" type="checkbox"> b</li>
-</ul>
-<ul>
-<li><input disabled="" type="checkbox"> c</li>
-</ul>
-<h2 id="4、代码块（将代码放在两个-之间）"><a href="#4、代码块（将代码放在两个-之间）" class="headerlink" title="4、代码块（将代码放在两个```之间）"></a>4、代码块（将代码放在两个```之间）</h2><p>效果：</p>
-<pre><code>#include&lt;stdio.h&gt;
-int main(){
-    printf(&quot;Hello World!\n&quot;);
-    return 0;
-}</code></pre><h2 id="5、行内代码-（代码放在两个-之间）"><a href="#5、行内代码-（代码放在两个-之间）" class="headerlink" title="5、行内代码 （代码放在两个``之间）"></a>5、行内代码 （代码放在两个``之间）</h2><pre><code>use the &#39;printf()&#39; function;</code></pre><p>效果：<br>use the <code>printf()</code> function;</p>
-<h2 id="6-数学公式"><a href="#6-数学公式" class="headerlink" title="6.数学公式"></a>6.数学公式</h2><h4 id="6-1-数学块-（-开头）"><a href="#6-1-数学块-（-开头）" class="headerlink" title="6.1 数学块 （$$开头）"></a>6.1 数学块 （$$开头）</h4><pre><code>$$
-\lim_{x \to \infty} \exp(-x) = 0
-$$</code></pre><p>效果：<br>$$<br>\lim_{x \to \infty} \exp(-x) = 0<br>$$</p>
-<h4 id="6-2-行内数学公式-（以-开头结尾）"><a href="#6-2-行内数学公式-（以-开头结尾）" class="headerlink" title="6.2 行内数学公式 （以$开头结尾）"></a>6.2 行内数学公式 （以$开头结尾）</h4><pre><code>$\lim_{x \to \infty} \exp(-x) = 0$</code></pre><p>效果：<br>$\lim_{x \to \infty} \exp(-x) = 0$</p>
-<h2 id="7、表格-（-为分割线）"><a href="#7、表格-（-为分割线）" class="headerlink" title="7、表格 （|为分割线）"></a>7、表格 （|为分割线）</h2><p>用法：</p>
-<pre><code>以|为分割线，划分表格
-例：
-|1|2|3|4|</code></pre><p>效果：<br>|1|2|3|4|</p>
-<h2 id="8、脚注-（-内容-）"><a href="#8、脚注-（-内容-）" class="headerlink" title="8、脚注 （[^内容]）"></a>8、脚注 （[^内容]）</h2><p>例：</p>
-<pre><code>脚注[^1]
-[^1]:解释</code></pre><p>效果：<br>脚注[^1]</p>
-<h2 id="9、分割线-（-或者—）"><a href="#9、分割线-（-或者—）" class="headerlink" title="9、分割线 （***或者—）"></a>9、分割线 （***或者—）</h2><p>例：</p>
-<pre><code>***</code></pre><p>效果：</p>
-<hr>
-<h2 id="10、YAML-Front-Matter2-（—）"><a href="#10、YAML-Front-Matter2-（—）" class="headerlink" title="10、YAML Front Matter2 （—）"></a>10、YAML Front Matter2 （—）</h2><p>用法：</p>
-<pre><code>在开头输入—</code></pre><p>效果：<br>—input</p>
-<h2 id="11、链接"><a href="#11、链接" class="headerlink" title="11、链接"></a>11、链接</h2><h4 id="11-1-内链-（链接内容）"><a href="#11-1-内链-（链接内容）" class="headerlink" title="11.1 内链 （链接内容）"></a>11.1 内链 （<a href="链接源" title="title">链接内容</a>）</h4><p>例：</p>
-<pre><code>[Baidu](https://www.baidu.com &quot;Baidu&quot;)</code></pre><p>效果：<br><a href="https://www.baidu.com" target="_blank" rel="noopener" title="Baidu">Baidu</a><br>title需要加引号</p>
-<h4 id="11-2-引用链接-（-链接内容-id-）"><a href="#11-2-引用链接-（-链接内容-id-）" class="headerlink" title="11.2 引用链接 （[链接内容][id]）"></a>11.2 引用链接 （[链接内容][id]）</h4><p>用法：</p>
-<pre><code>[链接内容][id]
-[id]:链接源 &quot;title&quot;
-例：
-[Baidu][id]
-[id]:http://www.baidu.com &quot;Baidu&quot;</code></pre><p>效果：<br>[Baidu][id]<br>[id]: <a href="http://www.baidu.com" target="_blank" rel="noopener">http://www.baidu.com</a>    “Baidu”</p>
-<h2 id="12、URLs-（-lt-gt-括住URL）"><a href="#12、URLs-（-lt-gt-括住URL）" class="headerlink" title="12、URLs （&lt;&gt;括住URL）"></a>12、URLs （&lt;&gt;括住URL）</h2><pre><code>用&lt;&gt;括住URL
-对于标准URL，可自动识别
-例：
-www.baidu.com
-&lt;i@163.com&gt;</code></pre><p>效果:<br><a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a><br><a href="mailto:&#105;&#64;&#49;&#54;&#51;&#x2e;&#x63;&#111;&#109;">&#105;&#64;&#49;&#54;&#51;&#x2e;&#x63;&#111;&#109;</a></p>
-<h2 id="13、图片"><a href="#13、图片" class="headerlink" title="13、图片"></a>13、图片</h2><p>用法：</p>
-<pre><code>手动添加，前面加!，格式类似链接
-用鼠标将图片拖入
-例：
-![截图](D:\Typora\笔记\1.jpg &quot;截图&quot;)</code></pre><h2 id="14、斜体-（以-或-括住）"><a href="#14、斜体-（以-或-括住）" class="headerlink" title="14、斜体 （以* *或_ _括住）"></a>14、斜体 （以* *或_ _括住）</h2><p>例：</p>
-<pre><code>*example* _example_</code></pre><p>效果：<br><em>example</em> <em>example</em></p>
-<h2 id="15、加粗-（-或-）"><a href="#15、加粗-（-或-）" class="headerlink" title="15、加粗 （** **或__ __）"></a>15、加粗 （** **或__ __）</h2><pre><code>以双或双_开头，以双或双_结尾
-例：**example** __example__</code></pre><p>效果:<br><strong>example</strong> <strong>example</strong></p>
-<h2 id="16、删除线-（以两个-开头结尾）"><a href="#16、删除线-（以两个-开头结尾）" class="headerlink" title="16、删除线 （以两个~~开头结尾）"></a>16、删除线 （以两个~~开头结尾）</h2><pre><code>以两个~开头，两个~结尾
-例：
-~example~</code></pre><p>效果：<br><del>example</del></p>
-<h2 id="17、下划线-（-）"><a href="#17、下划线-（-）" class="headerlink" title="17、下划线 （ ）"></a>17、下划线 （<u> </u>）</h2><pre><code>&lt;u&gt;example&lt;/u&gt;</code></pre><p>效果：<br><u>example</u></p>
-<h2 id="18、表情-（-表情单词-）"><a href="#18、表情-（-表情单词-）" class="headerlink" title="18、表情 （:表情单词:）"></a>18、表情 （:表情单词:）</h2><p>例：</p>
-<pre><code>:smile:
-:angry:
-:happy:
-:cry:
-:weary:            //疲倦的
-:flushed:        //兴奋的
-:imp:            //魔鬼</code></pre><p>:smile:<br>:angry:<br>:happy:<br>:cry:<br>:weary:<br>:flushed:<br>:imp:            </p>
-<h2 id="19、下标-（以双-括住内容）"><a href="#19、下标-（以双-括住内容）" class="headerlink" title="19、下标 （以双~括住内容）"></a>19、下标 （以双~括住内容）</h2><pre><code>使用双~括住内容
-例：
-H~2~0</code></pre><p>效果：<br>H<del>2</del>0</p>
-<h2 id="20、上标-（以双-括住内容）"><a href="#20、上标-（以双-括住内容）" class="headerlink" title="20、上标 （以双^括住内容）"></a>20、上标 （以双^括住内容）</h2><pre><code>用法：
-使用双^括住内容
-例：
-x^2^</code></pre><p>效果：<br>x^2^</p>
-<h2 id="21、高亮-（以双-括住内容）"><a href="#21、高亮-（以双-括住内容）" class="headerlink" title="21、高亮 （以双==括住内容）"></a>21、高亮 （以双==括住内容）</h2><pre><code>用法：
-使用双==括住内容
-例：
-==asd==</code></pre><p>效果：<br>==asd==</p>
-<h2 id="22、HTML"><a href="#22、HTML" class="headerlink" title="22、HTML"></a>22、HTML</h2><pre><code>例：
-&lt;button&gt;example&lt;/button&gt;</code></pre><p>效果：<br><button>example</button></p>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>内推试水加吐槽加分享</title>
+      <link href="/2020/03/11/work/"/>
+      <url>/2020/03/11/work/</url>
+      
+        <content type="html"><![CDATA[<p>中午闲着没事做，又不想睡觉，就20分钟做了份简历，找渠道搞了些内推，瞎搞了一翻。考研人的无聊救赎，你们都去找工作吧，弟弟想上岸。<br><img src="/images/blog/1.jpg" alt="被疫情逼疯的考研生"></p><h4 id="1-快手"><a href="#1-快手" class="headerlink" title="1.快手"></a>1.快手</h4><p><a href="https://campus.kuaishou.cn/#/campus/index" target="_blank" rel="noopener" title="kuaishou">点击去投</a></p><h6 id="吐槽和建议"><a href="#吐槽和建议" class="headerlink" title="吐槽和建议"></a>吐槽和建议</h6><p>快手的内推网站做的是真的烂，我的简历就传了一半，就投了，注意看自己的简历，注意多刷新几次。</p><p>快手老铁永久的失去我了<br><img src="/images/blog/2.jpg" alt=""></p><h4 id="2-小米"><a href="#2-小米" class="headerlink" title="2.小米"></a>2.小米</h4><p><a href="https://app.mokahr.com/campus_apply/xiaomi/22018#/jobs?_k=u2rkc9" target="_blank" rel="noopener" title="xiaomi">点击去投</a></p><h5 id="吐槽和建议-1"><a href="#吐槽和建议-1" class="headerlink" title="吐槽和建议"></a>吐槽和建议</h5><p>作为朋友圈小米第一黑粉，也不得不夸小米内推网站体验感还真不错，没有吐槽的地方。OMG投他</p><h4 id="3-网易"><a href="#3-网易" class="headerlink" title="3.网易"></a>3.网易</h4><p><a href="https://campus.163.com/app/index" target="_blank" rel="noopener" title="wangyi">点击去投</a></p><h5 id="吐槽和建议-2"><a href="#吐槽和建议-2" class="headerlink" title="吐槽和建议"></a>吐槽和建议</h5><p>网易这公司真有意思，竞赛只有top3，top10和进入决赛，实习生门槛这么高吗。 自卑.jpg</p><h4 id="4-京东"><a href="#4-京东" class="headerlink" title="4.京东"></a>4.京东</h4><p><a href="http://campus.jd.com/home" target="_blank" rel="noopener" title="jingdong">点击去投</a></p><h5 id="吐槽和建议-3"><a href="#吐槽和建议-3" class="headerlink" title="吐槽和建议"></a>吐槽和建议</h5><p>需要内推码，有需要的童鞋可以私戳我，京东这页面是贼棒的，不过需要成绩单和证书啥的，都在学校就没投。</p><h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>先这四个吧，随便一玩竟成了用户体验教验员，快手程序员扣工资，啥网站，体验贼差。<br>不定时更新，欢迎关注我博客。</p>]]></content>
+      
+      
       <categories>
-        <category>Markdown</category>
+          
+          <category> Markdown </category>
+          
       </categories>
-  </entry>
-  <entry>
-    <title>My New Post</title>
-    <url>/2020/02/29/My-New-Post/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>博客文章标题设置</title>
-    <url>/2020/02/28/Hello-My-First-Blog/</url>
-    <content><![CDATA[<h2 id="title"><a href="#title" class="headerlink" title="title"></a>title</h2><p>Markdown 的文件标题    文章标题，强烈建议填写此选项</p>
-<h2 id="date"><a href="#date" class="headerlink" title="date"></a>date</h2><p>文件创建时的日期时间    发布时间，强烈建议填写此选项，且最好保证全局唯一</p>
-<h2 id="author"><a href="#author" class="headerlink" title="author"></a>author</h2><p>根 _config.yml 中的 author    文章作者</p>
-<h2 id="img"><a href="#img" class="headerlink" title="img"></a>img</h2><p>featureImages 中的某个值    文章特征图，推荐使用图床(腾讯云、七牛云、又拍云等)来做图片的路径.如: <a href="http://xxx.com/xxx.jpg" target="_blank" rel="noopener">http://xxx.com/xxx.jpg</a></p>
-<h2 id="top-true"><a href="#top-true" class="headerlink" title="top    true"></a>top    true</h2><p>推荐文章（文章是否置顶），如果 top 值为 true，则会作为首页推荐文章</p>
-<h2 id="cover-false"><a href="#cover-false" class="headerlink" title="cover    false"></a>cover    false</h2><p>v1.0.2版本新增，表示该文章是否需要加入到首页轮播封面中</p>
-<h2 id="coverImg"><a href="#coverImg" class="headerlink" title="coverImg"></a>coverImg</h2><p>无    v1.0.2版本新增，表示该文章在首页轮播封面需要显示的图片路径，如果没有，则默认使用文章的特色图片</p>
-<h2 id="password"><a href="#password" class="headerlink" title="password"></a>password</h2><p> 无    文章阅读密码，如果要对文章设置阅读验证密码的话，就可以设置 password 的值，该值必须是用 SHA256加密后的密码，防止被他人识破。前提是在主题的 config.yml 中激活了 verifyPassword 选项</p>
-<h2 id="toc-true"><a href="#toc-true" class="headerlink" title="toc    true"></a>toc    true</h2><p>是否开启 TOC，可以针对某篇文章单独关闭 TOC 的功能。前提是在主题的 config.yml 中激活了 toc 选项<br>mathjax    false    是否开启数学公式支持 ，本文章是否开启 mathjax，且需要在主题的 _config.yml 文件中也需要开启才行</p>
-<h2 id="summary-无"><a href="#summary-无" class="headerlink" title="summary    无"></a>summary    无</h2><p>文章摘要，自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要</p>
-<h2 id="categories-无"><a href="#categories-无" class="headerlink" title="categories    无"></a>categories    无</h2><p>文章分类，本主题的分类表示宏观上大的分类，只建议一篇文章一个分类</p>
-<h2 id="tags-无"><a href="#tags-无" class="headerlink" title="tags    无"></a>tags    无</h2><p>文章标签，一篇文章可以多个标签</p>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> work </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>leetcode2两数相加</title>
+      <link href="/2020/03/01/leetcode2/"/>
+      <url>/2020/03/01/leetcode2/</url>
+      
+        <content type="html"><![CDATA[<h3 id="1-题意"><a href="#1-题意" class="headerlink" title="1.题意"></a>1.题意</h3><p>给出两个 非空 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方式存储的，并且它们的每个节点只能存储 一位 数字。<br>如果，我们将这两个数相加起来，则会返回一个新的链表来表示它们的和。<br>输入：(2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)<br>输出：7 -&gt; 0 -&gt; 8<br>原因：342 + 465 = 807</p><h3 id="2-思路"><a href="#2-思路" class="headerlink" title="2.思路"></a>2.思路</h3><ol><li>链表还是不是很熟悉</li><li>直接模拟。因为是逆序给出的所以直接遍历一遍按位相加就好了，实现过程中用一个变量记录进位情况</li></ol><h3 id="3-代码展示"><a href="#3-代码展示" class="headerlink" title="3.代码展示"></a>3.代码展示</h3><pre><code>class Solution {public:    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {        ListNode res(0), *p = &amp;res;        int n = 0;        while(l1 != NULL || l2 != NULL || n){            int sum =0;            if(l1 != NULL) sum += l1 -&gt; val;            if(l2 != NULL) sum += l2 -&gt; val;            sum += n;            n = sum / 10;            p -&gt; next = new ListNode(sum % 10);            p = p -&gt; next;            if(l1 != NULL) l1 = l1 -&gt; next;            if(l2 != NULL) l2 = l2 -&gt; next;        }        return res.next;    }};</code></pre>]]></content>
+      
+      
       <categories>
-        <category>Markdown</category>
+          
+          <category> Markdown </category>
+          
       </categories>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2020/02/27/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="hello-tianjian"><a href="#hello-tianjian" class="headerlink" title="hello tianjian"></a>hello tianjian</h2><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<a id="more"></a>
-
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
-  </entry>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>leetcode1:两数之和</title>
+      <link href="/2020/03/01/leetcode1/"/>
+      <url>/2020/03/01/leetcode1/</url>
+      
+        <content type="html"><![CDATA[<h3 id="1-题意"><a href="#1-题意" class="headerlink" title="1. 题意"></a>1. 题意</h3><p>给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。</p><h3 id="2-思路"><a href="#2-思路" class="headerlink" title="2. 思路"></a>2. 思路</h3><ol><li>首先肯定是暴力解法双重循环暴力解决，复杂度 O（n2）</li><li>如果题目是有序的话我们可以二分优化一重循环，不是有序可以用map记录下标但这样也不是很好</li><li>我们可以借鉴桶排序思想用map记录一下，前面出现的值，循环寻找，这样就优化了一重循环，用空间复杂度换时间复杂度</li></ol><h3 id="3-代码展示"><a href="#3-代码展示" class="headerlink" title="3.代码展示"></a>3.代码展示</h3><h6 id="1-暴力解法"><a href="#1-暴力解法" class="headerlink" title="1.暴力解法"></a>1.暴力解法</h6><pre><code>class Solution {public:    vector&lt;int&gt; twoSum(vector&lt;int&gt;&amp; nums, int target) {        int d = nums.size();        vector&lt;int&gt; result;        int flag = 0;        for(int i = 0; i &lt; d; i++){            for(int j = 0; j &lt; d; j++){                if(i == j) continue;                if(nums[i] + nums[j] == target &amp;&amp; i != j){                    result.push_back(i);                    result.push_back(j);                    flag = 1;                    break;                }            }            if(flag) break;        }        return result;    }};</code></pre><h6 id="map优化解法"><a href="#map优化解法" class="headerlink" title="map优化解法"></a>map优化解法</h6><pre><code>class Solution {public:    vector&lt;int&gt; twoSum(vector&lt;int&gt;&amp; nums, int target) {        map&lt;int, int&gt; mp;        int n = nums.size();        for(int i = 0; i &lt; n; i++)        {            if(mp.count(target - nums[i]))                return {mp[target -nums[i]], i};            mp[nums[i]] = i;        }        return {-1, -1};    }};</code></pre><h3 id="4-总结"><a href="#4-总结" class="headerlink" title="4.总结"></a>4.总结</h3><p>1.好久没打比赛了有点生疏，呜呜呜我哭<br>2.leetcode这oj形式真难用<br>3.博客终于搭好了，开始写点技术类博客</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Markdown </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>markdown 的基础操作</title>
+      <link href="/2020/03/01/markdown-s-operate/"/>
+      <url>/2020/03/01/markdown-s-operate/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1、标题：-H1-H6"><a href="#1、标题：-H1-H6" class="headerlink" title="1、标题：(H1~H6)"></a>1、标题：(H1~H6)</h2><pre><code>H1（#） ----------ctrl+1H2(##) -------------ctrl+2…H6（######） --ctrl+6</code></pre><h2 id="2、引用-（-gt-开头）"><a href="#2、引用-（-gt-开头）" class="headerlink" title="2、引用 （&gt;开头）"></a>2、引用 （&gt;开头）</h2><pre><code>开头以 &gt; 表示，可以嵌套引用</code></pre><p>例：</p><blockquote><p>Hello</p></blockquote><h2 id="3、序列"><a href="#3、序列" class="headerlink" title="3、序列"></a>3、序列</h2><h4 id="3-1-无序序列（-内容）"><a href="#3-1-无序序列（-内容）" class="headerlink" title="3.1 无序序列（+/-/* 内容）"></a>3.1 无序序列（+/-/* 内容）</h4><pre><code>+ Red- Green* Blue</code></pre><p>效果：</p><ul><li>Red</li></ul><ul><li>Green</li></ul><ul><li>Blue</li></ul><h4 id="3-2-有序序列-1-2-3-内容"><a href="#3-2-有序序列-1-2-3-内容" class="headerlink" title="3.2 有序序列 (1/2/3. 内容)"></a>3.2 有序序列 (1/2/3. 内容)</h4><pre><code>1.  Red2.  Green3.    Blue</code></pre><p>效果：</p><ol><li>Red</li><li>Green</li><li>Blue</li></ol><h4 id="3-3-可选序列-（-内容）"><a href="#3-3-可选序列-（-内容）" class="headerlink" title="3.3 可选序列 （*/+/- [ ] 内容）"></a>3.3 可选序列 （*/+/- [ ] 内容）</h4><pre><code>- [ ] a+ [x] b* [ ] c</code></pre><p>效果：</p><ul><li><input disabled="" type="checkbox"> a</li></ul><ul><li><input checked="" disabled="" type="checkbox"> b</li></ul><ul><li><input disabled="" type="checkbox"> c</li></ul><h2 id="4、代码块（将代码放在两个-之间）"><a href="#4、代码块（将代码放在两个-之间）" class="headerlink" title="4、代码块（将代码放在两个```之间）"></a>4、代码块（将代码放在两个```之间）</h2><p>效果：</p><pre><code>#include&lt;stdio.h&gt;int main(){    printf(&quot;Hello World!\n&quot;);    return 0;}</code></pre><h2 id="5、行内代码-（代码放在两个-之间）"><a href="#5、行内代码-（代码放在两个-之间）" class="headerlink" title="5、行内代码 （代码放在两个``之间）"></a>5、行内代码 （代码放在两个``之间）</h2><pre><code>use the &#39;printf()&#39; function;</code></pre><p>效果：<br>use the <code>printf()</code> function;</p><h2 id="6-数学公式"><a href="#6-数学公式" class="headerlink" title="6.数学公式"></a>6.数学公式</h2><h4 id="6-1-数学块-（-开头）"><a href="#6-1-数学块-（-开头）" class="headerlink" title="6.1 数学块 （$$开头）"></a>6.1 数学块 （$$开头）</h4><pre><code>$$\lim_{x \to \infty} \exp(-x) = 0$$</code></pre><p>效果：<br>$$<br>\lim_{x \to \infty} \exp(-x) = 0<br>$$</p><h4 id="6-2-行内数学公式-（以-开头结尾）"><a href="#6-2-行内数学公式-（以-开头结尾）" class="headerlink" title="6.2 行内数学公式 （以$开头结尾）"></a>6.2 行内数学公式 （以$开头结尾）</h4><pre><code>$\lim_{x \to \infty} \exp(-x) = 0$</code></pre><p>效果：<br>$\lim_{x \to \infty} \exp(-x) = 0$</p><h2 id="7、表格-（-为分割线）"><a href="#7、表格-（-为分割线）" class="headerlink" title="7、表格 （|为分割线）"></a>7、表格 （|为分割线）</h2><p>用法：</p><pre><code>以|为分割线，划分表格例：|1|2|3|4|</code></pre><p>效果：<br>|1|2|3|4|</p><h2 id="8、脚注-（-内容-）"><a href="#8、脚注-（-内容-）" class="headerlink" title="8、脚注 （[^内容]）"></a>8、脚注 （[^内容]）</h2><p>例：</p><pre><code>脚注[^1][^1]:解释</code></pre><p>效果：<br>脚注[^1]</p><h2 id="9、分割线-（-或者—）"><a href="#9、分割线-（-或者—）" class="headerlink" title="9、分割线 （***或者—）"></a>9、分割线 （***或者—）</h2><p>例：</p><pre><code>***</code></pre><p>效果：</p><hr><h2 id="10、YAML-Front-Matter2-（—）"><a href="#10、YAML-Front-Matter2-（—）" class="headerlink" title="10、YAML Front Matter2 （—）"></a>10、YAML Front Matter2 （—）</h2><p>用法：</p><pre><code>在开头输入—</code></pre><p>效果：<br>—input</p><h2 id="11、链接"><a href="#11、链接" class="headerlink" title="11、链接"></a>11、链接</h2><h4 id="11-1-内链-（链接内容）"><a href="#11-1-内链-（链接内容）" class="headerlink" title="11.1 内链 （链接内容）"></a>11.1 内链 （<a href="链接源" title="title">链接内容</a>）</h4><p>例：</p><pre><code>[Baidu](https://www.baidu.com &quot;Baidu&quot;)</code></pre><p>效果：<br><a href="https://www.baidu.com" target="_blank" rel="noopener" title="Baidu">Baidu</a><br>title需要加引号</p><h4 id="11-2-引用链接-（-链接内容-id-）"><a href="#11-2-引用链接-（-链接内容-id-）" class="headerlink" title="11.2 引用链接 （[链接内容][id]）"></a>11.2 引用链接 （[链接内容][id]）</h4><p>用法：</p><pre><code>[链接内容][id][id]:链接源 &quot;title&quot;例：[Baidu][id][id]:http://www.baidu.com &quot;Baidu&quot;</code></pre><p>效果：<br>[Baidu][id]<br>[id]: <a href="http://www.baidu.com" target="_blank" rel="noopener">http://www.baidu.com</a>    “Baidu”</p><h2 id="12、URLs-（-lt-gt-括住URL）"><a href="#12、URLs-（-lt-gt-括住URL）" class="headerlink" title="12、URLs （&lt;&gt;括住URL）"></a>12、URLs （&lt;&gt;括住URL）</h2><pre><code>用&lt;&gt;括住URL对于标准URL，可自动识别例：www.baidu.com&lt;i@163.com&gt;</code></pre><p>效果:<br><a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a><br><a href="mailto:&#x69;&#x40;&#x31;&#54;&#51;&#46;&#x63;&#x6f;&#109;">&#x69;&#x40;&#x31;&#54;&#51;&#46;&#x63;&#x6f;&#109;</a></p><h2 id="13、图片"><a href="#13、图片" class="headerlink" title="13、图片"></a>13、图片</h2><p>用法：</p><pre><code>手动添加，前面加!，格式类似链接用鼠标将图片拖入例：![截图](D:\Typora\笔记\1.jpg &quot;截图&quot;)</code></pre><h2 id="14、斜体-（以-或-括住）"><a href="#14、斜体-（以-或-括住）" class="headerlink" title="14、斜体 （以* *或_ _括住）"></a>14、斜体 （以* *或_ _括住）</h2><p>例：</p><pre><code>*example* _example_</code></pre><p>效果：<br><em>example</em> <em>example</em></p><h2 id="15、加粗-（-或-）"><a href="#15、加粗-（-或-）" class="headerlink" title="15、加粗 （** **或__ __）"></a>15、加粗 （** **或__ __）</h2><pre><code>以双或双_开头，以双或双_结尾例：**example** __example__</code></pre><p>效果:<br><strong>example</strong> <strong>example</strong></p><h2 id="16、删除线-（以两个-开头结尾）"><a href="#16、删除线-（以两个-开头结尾）" class="headerlink" title="16、删除线 （以两个~~开头结尾）"></a>16、删除线 （以两个~~开头结尾）</h2><pre><code>以两个~开头，两个~结尾例：~example~</code></pre><p>效果：<br><del>example</del></p><h2 id="17、下划线-（-）"><a href="#17、下划线-（-）" class="headerlink" title="17、下划线 （ ）"></a>17、下划线 （<u> </u>）</h2><pre><code>&lt;u&gt;example&lt;/u&gt;</code></pre><p>效果：<br><u>example</u></p><h2 id="18、表情-（-表情单词-）"><a href="#18、表情-（-表情单词-）" class="headerlink" title="18、表情 （:表情单词:）"></a>18、表情 （:表情单词:）</h2><p>例：</p><pre><code>:smile::angry::happy::cry::weary:            //疲倦的:flushed:        //兴奋的:imp:            //魔鬼</code></pre><p>:smile:<br>:angry:<br>:happy:<br>:cry:<br>:weary:<br>:flushed:<br>:imp:            </p><h2 id="19、下标-（以双-括住内容）"><a href="#19、下标-（以双-括住内容）" class="headerlink" title="19、下标 （以双~括住内容）"></a>19、下标 （以双~括住内容）</h2><pre><code>使用双~括住内容例：H~2~0</code></pre><p>效果：<br>H<del>2</del>0</p><h2 id="20、上标-（以双-括住内容）"><a href="#20、上标-（以双-括住内容）" class="headerlink" title="20、上标 （以双^括住内容）"></a>20、上标 （以双^括住内容）</h2><pre><code>用法：使用双^括住内容例：x^2^</code></pre><p>效果：<br>x^2^</p><h2 id="21、高亮-（以双-括住内容）"><a href="#21、高亮-（以双-括住内容）" class="headerlink" title="21、高亮 （以双==括住内容）"></a>21、高亮 （以双==括住内容）</h2><pre><code>用法：使用双==括住内容例：==asd==</code></pre><p>效果：<br>==asd==</p><h2 id="22、HTML"><a href="#22、HTML" class="headerlink" title="22、HTML"></a>22、HTML</h2><pre><code>例：&lt;button&gt;example&lt;/button&gt;</code></pre><p>效果：<br><button>example</button></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Markdown </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>博客文章标题设置</title>
+      <link href="/2020/02/28/Hello-My-First-Blog/"/>
+      <url>/2020/02/28/Hello-My-First-Blog/</url>
+      
+        <content type="html"><![CDATA[<h2 id="title"><a href="#title" class="headerlink" title="title"></a>title</h2><p>Markdown 的文件标题    文章标题，强烈建议填写此选项</p><h2 id="date"><a href="#date" class="headerlink" title="date"></a>date</h2><p>文件创建时的日期时间    发布时间，强烈建议填写此选项，且最好保证全局唯一</p><h2 id="author"><a href="#author" class="headerlink" title="author"></a>author</h2><p>根 _config.yml 中的 author    文章作者</p><h2 id="img"><a href="#img" class="headerlink" title="img"></a>img</h2><p>featureImages 中的某个值    文章特征图，推荐使用图床(腾讯云、七牛云、又拍云等)来做图片的路径.如: <a href="http://xxx.com/xxx.jpg" target="_blank" rel="noopener">http://xxx.com/xxx.jpg</a></p><h2 id="top-true"><a href="#top-true" class="headerlink" title="top    true"></a>top    true</h2><p>推荐文章（文章是否置顶），如果 top 值为 true，则会作为首页推荐文章</p><h2 id="cover-false"><a href="#cover-false" class="headerlink" title="cover    false"></a>cover    false</h2><p>v1.0.2版本新增，表示该文章是否需要加入到首页轮播封面中</p><h2 id="coverImg"><a href="#coverImg" class="headerlink" title="coverImg"></a>coverImg</h2><p>无    v1.0.2版本新增，表示该文章在首页轮播封面需要显示的图片路径，如果没有，则默认使用文章的特色图片</p><h2 id="password"><a href="#password" class="headerlink" title="password"></a>password</h2><p> 无    文章阅读密码，如果要对文章设置阅读验证密码的话，就可以设置 password 的值，该值必须是用 SHA256加密后的密码，防止被他人识破。前提是在主题的 config.yml 中激活了 verifyPassword 选项</p><h2 id="toc-true"><a href="#toc-true" class="headerlink" title="toc    true"></a>toc    true</h2><p>是否开启 TOC，可以针对某篇文章单独关闭 TOC 的功能。前提是在主题的 config.yml 中激活了 toc 选项<br>mathjax    false    是否开启数学公式支持 ，本文章是否开启 mathjax，且需要在主题的 _config.yml 文件中也需要开启才行</p><h2 id="summary-无"><a href="#summary-无" class="headerlink" title="summary    无"></a>summary    无</h2><p>文章摘要，自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要</p><h2 id="categories-无"><a href="#categories-无" class="headerlink" title="categories    无"></a>categories    无</h2><p>文章分类，本主题的分类表示宏观上大的分类，只建议一篇文章一个分类</p><h2 id="tags-无"><a href="#tags-无" class="headerlink" title="tags    无"></a>tags    无</h2><p>文章标签，一篇文章可以多个标签</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Markdown </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2020/02/27/hello-world/"/>
+      <url>/2020/02/27/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="hello-tianjian"><a href="#hello-tianjian" class="headerlink" title="hello tianjian"></a>hello tianjian</h2><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><a id="more"></a><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Markdown </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+  
+  
 </search>
