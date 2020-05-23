@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="leetcode1:两数之和, yifeng">
+    <meta name="keywords" content="fast springboot, yifeng">
     <meta name="description" content="一直奔跑，哪怕风雨">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>leetcode1:两数之和 | yifeng</title>
+    <title>fast springboot | yifeng</title>
     <link rel="icon" type="image/jpeg" href="/icon.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -237,12 +237,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">leetcode1:两数之和</h1>
+                    <h1 class="description center-align post-title">fast springboot</h1>
                 </div>
             </div>
         </div>
@@ -264,8 +264,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/leetcode/">
-                                <span class="chip bg-color">leetcode</span>
+                            <a href="/tags/java-docker/">
+                                <span class="chip bg-color">java,docker</span>
                             </a>
                         
                     </div>
@@ -289,21 +289,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-03-01
+                    2020-05-23
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-03-18
+                    2020-05-23
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    347
+                    202
                 </div>
                 
 
@@ -326,47 +326,36 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="1-题意"><a href="#1-题意" class="headerlink" title="1. 题意"></a>1. 题意</h3><p>给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。</p>
-<h3 id="2-思路"><a href="#2-思路" class="headerlink" title="2. 思路"></a>2. 思路</h3><ol>
-<li>首先肯定是暴力解法双重循环暴力解决，复杂度 O（n2）</li>
-<li>如果题目是有序的话我们可以二分优化一重循环，不是有序可以用map记录下标但这样也不是很好</li>
-<li>我们可以借鉴桶排序思想用map记录一下，前面出现的值，循环寻找，这样就优化了一重循环，用空间复杂度换时间复杂度</li>
-</ol>
-<h3 id="3-代码展示"><a href="#3-代码展示" class="headerlink" title="3.代码展示"></a>3.代码展示</h3><h6 id="1-暴力解法"><a href="#1-暴力解法" class="headerlink" title="1.暴力解法"></a>1.暴力解法</h6><pre><code>class Solution {
-public:
-    vector&lt;int&gt; twoSum(vector&lt;int&gt;&amp; nums, int target) {
-        int d = nums.size();
-        vector&lt;int&gt; result;
-        int flag = 0;
-        for(int i = 0; i &lt; d; i++){
-            for(int j = 0; j &lt; d; j++){
-                if(i == j) continue;
-                if(nums[i] + nums[j] == target &amp;&amp; i != j){
-                    result.push_back(i);
-                    result.push_back(j);
-                    flag = 1;
-                    break;
-                }
-            }
-            if(flag) break;
-        }
-        return result;
-    }
-};</code></pre><h6 id="map优化解法"><a href="#map优化解法" class="headerlink" title="map优化解法"></a>map优化解法</h6><pre><code>class Solution {
-public:
-    vector&lt;int&gt; twoSum(vector&lt;int&gt;&amp; nums, int target) {
-        map&lt;int, int&gt; mp;
-        int n = nums.size();
-        for(int i = 0; i &lt; n; i++)
-        {
-            if(mp.count(target - nums[i]))
-                return {mp[target -nums[i]], i};
-            mp[nums[i]] = i;
-        }
-        return {-1, -1};
-    }
-};</code></pre><h3 id="4-总结"><a href="#4-总结" class="headerlink" title="4.总结"></a>4.总结</h3><p>1.好久没打比赛了有点生疏，呜呜呜我哭<br>2.leetcode这oj形式真难用<br>3.博客终于搭好了，开始写点技术类博客</p>
+                <h3 id="学Java时间越长越想去阿里"><a href="#学Java时间越长越想去阿里" class="headerlink" title="学Java时间越长越想去阿里"></a>学Java时间越长越想去阿里</h3><p>阿里提供的镜像和仓库啥的都好方便啊喜欢<br>本文推荐的是阿里的远程仓库插件，在pom.xml文件中加入，依赖导入飞起</p>
+<pre><code> &lt;!--配置阿里云仓库--&gt;
+    &lt;repositories&gt;
+        &lt;repository&gt;
+            &lt;id&gt;public&lt;/id&gt;
+            &lt;name&gt;aliyun nexus&lt;/name&gt;
+            &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public/&lt;/url&gt;
+            &lt;releases&gt;
+                &lt;enabled&gt;true&lt;/enabled&gt;
+            &lt;/releases&gt;
+            &lt;snapshots&gt;
+                &lt;enabled&gt;false&lt;/enabled&gt;
+            &lt;/snapshots&gt;
+        &lt;/repository&gt;
+    &lt;/repositories&gt;
 
+    &lt;pluginRepositories&gt;
+        &lt;pluginRepository&gt;
+            &lt;id&gt;public&lt;/id&gt;
+            &lt;name&gt;aliyun nexus&lt;/name&gt;
+            &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public/&lt;/url&gt;
+            &lt;releases&gt;
+                &lt;enabled&gt;true&lt;/enabled&gt;
+            &lt;/releases&gt;
+            &lt;snapshots&gt;
+                &lt;enabled&gt;false&lt;/enabled&gt;
+            &lt;/snapshots&gt;
+        &lt;/pluginRepository&gt;
+    &lt;/pluginRepositories&gt;
+</code></pre>
             </div>
             <hr/>
 
@@ -391,7 +380,7 @@ public:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://tianjianyi.github.io.git/2020/03/01/leetcode1/">https://tianjianyi.github.io.git/2020/03/01/leetcode1/</a>
+                    <a href="https://tianjianyi.github.io.git/2020/05/23/fast-springboot/">https://tianjianyi.github.io.git/2020/05/23/fast-springboot/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -429,8 +418,8 @@ public:
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/leetcode/">
-                                    <span class="chip bg-color">leetcode</span>
+                                <a href="/tags/java-docker/">
+                                    <span class="chip bg-color">java,docker</span>
                                 </a>
                             
                         </div>
@@ -859,29 +848,30 @@ public:
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/03/01/leetcode2/">
+                <a href="/2020/05/23/fast-springboot/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="leetcode2两数相加">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="fast springboot">
                         
-                        <span class="card-title">leetcode2两数相加</span>
+                        <span class="card-title">fast springboot</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            leetcode2
+                            阿里云远程仓库快速导入依赖
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-01
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-23
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -894,11 +884,12 @@ public:
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/leetcode/">
-                        <span class="chip bg-color">leetcode</span>
+                    <a href="/tags/java-docker/">
+                        <span class="chip bg-color">java,docker</span>
                     </a>
                     
                 </div>
@@ -912,33 +903,29 @@ public:
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/03/01/markdown-s-operate/">
+                <a href="/2020/03/25/crawler01/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="markdown 的基础操作">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="crawler01">
                         
-                        <span class="card-title">markdown 的基础操作</span>
+                        <span class="card-title">crawler01</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            markdown的基础操作
+                            
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-01
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-25
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Markdown/" class="post-category">
-                                    Markdown
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            tianjian
                             
                         </span>
                     </div>
