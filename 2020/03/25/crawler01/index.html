@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="crawler01, yifeng">
+    <meta name="keywords" content="爬虫基础操作, yifeng">
     <meta name="description" content="一直奔跑，哪怕风雨">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>crawler01 | yifeng</title>
+    <title>爬虫基础操作 | yifeng</title>
     <link rel="icon" type="image/jpeg" href="/icon.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -237,12 +237,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">crawler01</h1>
+                    <h1 class="description center-align post-title">爬虫基础操作</h1>
                 </div>
             </div>
         </div>
@@ -252,117 +252,35 @@
 
 
 
-<main class="post-container content">
+<main class="container content">
 
     
-    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
-<style>
-    #articleContent h1::before,
-    #articleContent h2::before,
-    #articleContent h3::before,
-    #articleContent h4::before,
-    #articleContent h5::before,
-    #articleContent h6::before {
-        display: block;
-        content: " ";
-        height: 100px;
-        margin-top: -100px;
-        visibility: hidden;
-    }
-
-    #articleContent :focus {
-        outline: none;
-    }
-
-    .toc-fixed {
-        position: fixed;
-        top: 64px;
-    }
-
-    .toc-widget {
-        width: 345px;
-        padding-left: 20px;
-    }
-
-    .toc-widget .toc-title {
-        margin: 35px 0 15px 0;
-        padding-left: 17px;
-        font-size: 1.5rem;
-        font-weight: bold;
-        line-height: 1.5rem;
-    }
-
-    .toc-widget ol {
-        padding: 0;
-        list-style: none;
-    }
-
-    #toc-content {
-        height: calc(100vh - 250px);
-        overflow: auto;
-    }
-
-    #toc-content ol {
-        padding-left: 10px;
-    }
-
-    #toc-content ol li {
-        padding-left: 10px;
-    }
-
-    #toc-content .toc-link:hover {
-        color: #42b983;
-        font-weight: 700;
-        text-decoration: underline;
-    }
-
-    #toc-content .toc-link::before {
-        background-color: transparent;
-        max-height: 25px;
-    }
-
-    #toc-content .is-active-link {
-        color: #42b983;
-    }
-
-    #toc-content .is-active-link::before {
-        background-color: #42b983;
-    }
-
-    #floating-toc-btn {
-        position: fixed;
-        right: 15px;
-        bottom: 76px;
-        padding-top: 15px;
-        margin-bottom: 0;
-        z-index: 998;
-    }
-
-    #floating-toc-btn .btn-floating {
-        width: 48px;
-        height: 48px;
-    }
-
-    #floating-toc-btn .btn-floating i {
-        line-height: 48px;
-        font-size: 1.4rem;
-    }
-</style>
-<div class="row">
-    <div id="main-content" class="col s12 m12 l9">
-        <!-- 文章内容详情 -->
+    <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/java-crawler/">
+                                <span class="chip bg-color">java,crawler</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Markdown/" class="post-category">
+                                Markdown
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -378,14 +296,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-03-25
+                    2021-02-06
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    408
                 </div>
                 
 
@@ -408,7 +326,48 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h2 id="网络爬虫"><a href="#网络爬虫" class="headerlink" title="网络爬虫"></a>网络爬虫</h2><p>网络爬虫（Web crawler），是一种按照一定的规则，自动地抓取万维网信息的程序或者脚本。</p>
+<h4 id="1-环境依赖"><a href="#1-环境依赖" class="headerlink" title="1.环境依赖"></a>1.环境依赖</h4><pre><code>&lt;dependency&gt;
+    &lt;groupId&gt;org.apache.httpcomponents&lt;/groupId&gt;
+    &lt;artifactId&gt;httpclient&lt;/artifactId&gt;
+    &lt;version&gt;4.4&lt;/version&gt;
+&lt;/dependency&gt;</code></pre><h4 id="2-入门程序"><a href="#2-入门程序" class="headerlink" title="2.入门程序"></a>2.入门程序</h4><pre><code>         //1. 打开浏览器,创建HttpClient对象
+        CloseableHttpClient httpClient = HttpClients.createDefault();
+
+        //2. 输入网址,发起get请求创建HttpGet对象
+        HttpGet httpGet = new HttpGet(&quot;http://www.yifengfighting.cn&quot;);
+
+        //3.按回车，发起请求，返回响应，使用HttpClient对象发起请求
+        CloseableHttpResponse response = httpClient.execute(httpGet);
+
+        //4. 解析响应，获取数据
+        //判断状态码是否是200
+        if (response.getStatusLine().getStatusCode() == 200) {
+            HttpEntity httpEntity = response.getEntity();
+            String content = EntityUtils.toString(httpEntity, &quot;utf8&quot;);
+
+            System.out.println(content);
+        }</code></pre><h4 id="3-带参数的get请求"><a href="#3-带参数的get请求" class="headerlink" title="3.带参数的get请求"></a>3.带参数的get请求</h4><pre><code>        //设置请求地址是：http://yun.itheima.com/search?keys=Java
+        //创建URIBuilder
+        URIBuilder uriBuilder = new URIBuilder(&quot;http://yun.itheima.com/search&quot;);
+        //设置参数
+        uriBuilder.setParameter(&quot;keys&quot;,&quot;Java&quot;);
+
+        //创建HttpGet对象，设置url访问地址
+        HttpGet httpGet = new HttpGet(uriBuilder.build());</code></pre><h4 id="4-不带参数的post请求"><a href="#4-不带参数的post请求" class="headerlink" title="4.不带参数的post请求"></a>4.不带参数的post请求</h4><p> HttpGet httpGet = new HttpGet(“<a href="http://www.yifengfighting.cn&quot;" target="_blank" rel="noopener">http://www.yifengfighting.cn&quot;</a>);<br>–&gt;<br> HttpPost httpPost = new HttpPost(“<a href="http://www.yifengfighting.cn&quot;" target="_blank" rel="noopener">http://www.yifengfighting.cn&quot;</a>);</p>
+<h4 id="5-带参数的post请求"><a href="#5-带参数的post请求" class="headerlink" title="5.带参数的post请求"></a>5.带参数的post请求</h4><pre><code>  //创建HttpPost对象，设置url访问地址
+        HttpPost httpPost = new HttpPost(&quot;http://yun.itheima.com/search&quot;);
+
+        //声明List集合，封装表单中的参数
+        List&lt;NameValuePair&gt; params = new ArrayList&lt;NameValuePair&gt;();
+        //设置请求地址是：http://yun.itheima.com/search?keys=Java
+        params.add(new BasicNameValuePair(&quot;keys&quot;,&quot;Java&quot;));
+
+        //创建表单的Entity对象,第一个参数就是封装好的表单数据，第二个参数就是编码
+        UrlEncodedFormEntity formEntity = new UrlEncodedFormEntity(params,&quot;utf8&quot;);
+
+        //设置表单的Entity对象到Post请求中
+        httpPost.setEntity(formEntity);</code></pre>
             </div>
             <hr/>
 
@@ -423,7 +382,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://tianjianyi.github.io.git" rel="external nofollow noreferrer">tianjian</a>
+                    <a href="https://tianjianyi.github.io.git" rel="external nofollow noreferrer">田健</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -446,7 +405,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="https://tianjianyi.github.io.git" target="_blank">tianjian</a>
+                    <a href="https://tianjianyi.github.io.git" target="_blank">田健</a>
                     !
                 </span>
             </div>
@@ -470,7 +429,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/java-crawler/">
+                                    <span class="chip bg-color">java,crawler</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -1025,100 +988,6 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 </style>
 
 
-    </div>
-    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
-        <div class="toc-widget">
-            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
-            <div id="toc-content"></div>
-        </div>
-    </div>
-</div>
-
-<!-- TOC 悬浮按钮. -->
-
-<div id="floating-toc-btn" class="hide-on-med-and-down">
-    <a class="btn-floating btn-large bg-color">
-        <i class="fas fa-list-ul"></i>
-    </a>
-</div>
-
-
-<script src="/libs/tocbot/tocbot.min.js"></script>
-<script>
-    $(function () {
-        tocbot.init({
-            tocSelector: '#toc-content',
-            contentSelector: '#articleContent',
-            headingsOffset: -($(window).height() * 0.4 - 45),
-            collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
-        });
-
-        // modify the toc link href to support Chinese.
-        let i = 0;
-        let tocHeading = 'toc-heading-';
-        $('#toc-content a').each(function () {
-            $(this).attr('href', '#' + tocHeading + (++i));
-        });
-
-        // modify the heading title id to support Chinese.
-        i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
-            $(this).attr('id', tocHeading + (++i));
-        });
-
-        // Set scroll toc fixed.
-        let tocHeight = parseInt($(window).height() * 0.4 - 64);
-        let $tocWidget = $('.toc-widget');
-        $(window).scroll(function () {
-            let scroll = $(window).scrollTop();
-            /* add post toc fixed. */
-            if (scroll > tocHeight) {
-                $tocWidget.addClass('toc-fixed');
-            } else {
-                $tocWidget.removeClass('toc-fixed');
-            }
-        });
-
-        
-        /* 修复文章卡片 div 的宽度. */
-        let fixPostCardWidth = function (srcId, targetId) {
-            let srcDiv = $('#' + srcId);
-            if (srcDiv.length === 0) {
-                return;
-            }
-
-            let w = srcDiv.width();
-            if (w >= 450) {
-                w = w + 21;
-            } else if (w >= 350 && w < 450) {
-                w = w + 18;
-            } else if (w >= 300 && w < 350) {
-                w = w + 16;
-            } else {
-                w = w + 14;
-            }
-            $('#' + targetId).width(w);
-        };
-
-        // 切换TOC目录展开收缩的相关操作.
-        const expandedClass = 'expanded';
-        let $tocAside = $('#toc-aside');
-        let $mainContent = $('#main-content');
-        $('#floating-toc-btn .btn-floating').click(function () {
-            if ($tocAside.hasClass(expandedClass)) {
-                $tocAside.removeClass(expandedClass).hide();
-                $mainContent.removeClass('l9');
-            } else {
-                $tocAside.addClass(expandedClass).show();
-                $mainContent.addClass('l9');
-            }
-            fixPostCardWidth('artDetail', 'prenext-posts');
-        });
-        
-    });
-</script>
-
     
 
 </main>
@@ -1160,7 +1029,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">4.9k</span>&nbsp;字
+                class="white-color">6.1k</span>&nbsp;字
             
             
             

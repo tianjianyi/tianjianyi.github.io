@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="leetcode2两数相加, yifeng">
+    <meta name="keywords" content="5. 最长回文子串, yifeng">
     <meta name="description" content="一直奔跑，哪怕风雨">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>leetcode2两数相加 | yifeng</title>
+    <title>5. 最长回文子串 | yifeng</title>
     <link rel="icon" type="image/jpeg" href="/icon.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -237,12 +237,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">leetcode2两数相加</h1>
+                    <h1 class="description center-align post-title">5. 最长回文子串</h1>
                 </div>
             </div>
         </div>
@@ -289,21 +289,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-03-01
+                    2021-02-06
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-03-18
+                    2021-02-06
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    248
+                    206
                 </div>
                 
 
@@ -326,31 +326,35 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="1-题意"><a href="#1-题意" class="headerlink" title="1.题意"></a>1.题意</h3><p>给出两个 非空 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方式存储的，并且它们的每个节点只能存储 一位 数字。<br>如果，我们将这两个数相加起来，则会返回一个新的链表来表示它们的和。<br>输入：(2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)<br>输出：7 -&gt; 0 -&gt; 8<br>原因：342 + 465 = 807</p>
-<h3 id="2-思路"><a href="#2-思路" class="headerlink" title="2.思路"></a>2.思路</h3><ol>
-<li>链表还是不是很熟悉</li>
-<li>直接模拟。因为是逆序给出的所以直接遍历一遍按位相加就好了，实现过程中用一个变量记录进位情况</li>
-</ol>
-<h3 id="3-代码展示"><a href="#3-代码展示" class="headerlink" title="3.代码展示"></a>3.代码展示</h3><pre><code>class Solution {
+                <h3 id="1-题意"><a href="#1-题意" class="headerlink" title="1.题意"></a>1.题意</h3><p>给你一个字符串 s，找到 s 中最长的回文子串。</p>
+<p>示例 1：</p>
+<p>输入：s = “babad”<br>输出：”bab”<br>解释：”aba” 同样是符合题意的答案。</p>
+<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/longest-palindromic-substring" target="_blank" rel="noopener">https://leetcode-cn.com/problems/longest-palindromic-substring</a></p>
+<h3 id="2-思路"><a href="#2-思路" class="headerlink" title="2.思路"></a>2.思路</h3><p>最长回文子串长用的方法就是马拉车或者暴力剪枝，马拉车模板没带就不写了，暴力剪枝跑一波，很快啊，就过啦</p>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><pre><code>class Solution {
 public:
-    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-        ListNode res(0), *p = &amp;res;
-        int n = 0;
-        while(l1 != NULL || l2 != NULL || n){
-            int sum =0;
-            if(l1 != NULL) sum += l1 -&gt; val;
-            if(l2 != NULL) sum += l2 -&gt; val;
-            sum += n;
-            n = sum / 10;
-            p -&gt; next = new ListNode(sum % 10);
-            p = p -&gt; next;
-            if(l1 != NULL) l1 = l1 -&gt; next;
-            if(l2 != NULL) l2 = l2 -&gt; next;
-        }
-        return res.next;
+    string longestPalindrome(string s) {
+        int n = s.size(), re = 0;
+        string t;
+        for(int i = 0; i &lt; n; i++)
+            for(int j = i; j &lt; n; j++){
+                int a = i, b = j, flag = 1;
+                if(j - i + 1 &lt; re) continue;
+                while(b &gt;= a){
+                    if(s[b] != s[a]){
+                        flag = 0;
+                        break;
+                    }
+                    a++, b--;
+                }
+                if(flag &amp;&amp; re &lt; j - i + 1){
+                t = s.substr(i, j - i + 1), re = j - i + 1;
+                // cout &lt;&lt; i &lt;&lt; &quot; &quot; &lt;&lt; j &lt;&lt;endl;
+                } 
+            }
+        return t;
     }
-};
-</code></pre>
+};</code></pre>
             </div>
             <hr/>
 
@@ -375,7 +379,7 @@ public:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://tianjianyi.github.io.git/2020/03/01/leetcode2/">https://tianjianyi.github.io.git/2020/03/01/leetcode2/</a>
+                    <a href="https://tianjianyi.github.io.git/2021/02/06/5-%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2/">https://tianjianyi.github.io.git/2021/02/06/5-%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -843,29 +847,80 @@ public:
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/03/11/work/">
+                <a href="/2021/02/06/5-%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="内推试水加吐槽加分享">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="5. 最长回文子串">
                         
-                        <span class="card-title">内推试水加吐槽加分享</span>
+                        <span class="card-title">5. 最长回文子串</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            一些内推推荐
+                            leetcode01
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-11
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-06
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Markdown/" class="post-category">
+                                    Markdown
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/leetcode/">
+                        <span class="chip bg-color">leetcode</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/02/05/4-%E5%AF%BB%E6%89%BE%E4%B8%A4%E4%B8%AA%E6%AD%A3%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E4%B8%AD%E4%BD%8D%E6%95%B0/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="4. 寻找两个正序数组的中位数">
+                        
+                        <span class="card-title">4. 寻找两个正序数组的中位数</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            leetcode01
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-05
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -881,51 +936,10 @@ public:
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/work/">
-                        <span class="chip bg-color">work</span>
+                    <a href="/tags/leetcode/">
+                        <span class="chip bg-color">leetcode</span>
                     </a>
                     
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/03/01/markdown-s-operate/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="markdown 的基础操作">
-                        
-                        <span class="card-title">markdown 的基础操作</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            markdown的基础操作
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-01
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Markdown/" class="post-category">
-                                    Markdown
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
                 </div>
                 
             </div>
